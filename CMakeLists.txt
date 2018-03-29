@@ -63,8 +63,8 @@ add_library(${library_name} STATIC
 	)
 
 target_include_directories(${library_name} PRIVATE
-	${CMAKE_CURRENT_BINARY_DIR}/include
-	${directory}/
+	PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include
+	PRIVATE ${directory}/
 	)
 
 set(public_headers
